@@ -1,4 +1,4 @@
-import { Grid, Paper, Typography } from '@mui/material';
+import { Box, Grid, Paper, Typography } from '@mui/material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import {   useParams, useSearchParams } from 'react-router-dom';
@@ -32,7 +32,7 @@ const MoviePage = () => {
 
   return (
     <Box>
-        {data.reviews.map(item=>(
+        {data?.reviews?.map(item=>(
             <Paper sx={{backgroundColor:"skyblue",p:2,my:3}}>
                 <Typography>
                     {item.reviewerName}
